@@ -15,5 +15,9 @@ class Stack:
             last = len(self.items)-1
             return self.items[last]
 
+        def peek_list(self):
+            return self.items[len(self.items)-1]
+
         def size(self):
             return len(self.items)
+

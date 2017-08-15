@@ -18,3 +18,16 @@ class Scraper:
             if "html" in url:
                 print("\n" + url)
 
+    def save_headlines(self):
+        r = urllib.request.urlopen(self.site)
+        html = r.read()
+        parser = "html.parser"
+        soup = BeautifulSoup(html,parser)
+
+        with open("headlines.txt" , "w") as f:
+            for tag in soup.find_all("a"):
+                url = tag.get("href")
+                if url and "html" in url:
+                    print("\n" + url)
+                    f.write(url + "\n")
+
