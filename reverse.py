@@ -27,3 +27,15 @@ for item in range(len(stack2.items)):
 print(list2)
 
 
+def reverse_int(n):
+    return int(str(n)[::-1])
+
+n = int(input('Please enter some random number here:\n'))
+print(reverse_int(n))
+
+def reverse_string(s):
+    return (str(s)[::-1])
+
+s = 'Some Fucking String showing I didn\'t need the pop class...'
+print(s)
+print(reverse_string(s))
